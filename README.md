@@ -1,6 +1,6 @@
-# DM<spam>$^2$</span>RM: Dual-Mode Multimodal Ranking for Target Objects and Receptacles Based on Open-Vocabulary Instructions
+# DM2RM: Dual-Mode Multimodal Ranking for Target Objects and Receptacles Based on Open-Vocabulary Instructions
 
-This is the repository that contains source code for the DM$^2$RM [website](https://kkrr10.github.io/dm2rm/).
+This is the repository that contains source code for the DM2RM [website](https://kkrr10.github.io/dm2rm/).
 
 # Website License
 
