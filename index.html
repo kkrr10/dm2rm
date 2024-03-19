@@ -50,12 +50,16 @@
             <span class="author-block">Keio University</span>
           </div>
 
+          <div class="is-size-4 publication-authors">
+            <span class="author-block"><b>Under Review</b></span>
+          </div>
+
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- TODO: -->
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/xxx"
+              <span class="link-block">
+                <!-- TODO: -->
+                <a href="https://kkrr10.github.io/dm2rm/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -64,48 +68,61 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/xxx"
+                <!-- TODO: -->
+                <a href="https://kkrr10.github.io/dm2rm/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <!-- TODO: -->
-                <!-- <a href="https://www.youtube.com/watch?v=xxx" -->
-                <a class="external-link button is-normal is-rounded is-dark">
+                <!-- TODO: YouTube -->
+                <a href="#video"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video (TBU)</span>
+                  <span>Video</span>
                 </a>
               </span>
+              <!-- TODO: Poster? -->
               <!-- Code Link. -->
               <span class="link-block">
                 <!-- TODO: -->
-                <!-- <a href="https://github.com/xxx" -->
-                  <a class="external-link button is-normal is-rounded is-dark">
+                <a href="https://kkrr10.github.io/dm2rm/"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (TBU)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
                 <!-- TODO: -->
-                <!-- <a href="https://github.com/xxx" -->
-                  <a class="external-link button is-normal is-rounded is-dark">
+                <a href="https://kkrr10.github.io/dm2rm/"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Dataset (TBU)</span>
+                  <span>Dataset</span>
                   </a>
+              </span>
+              <!-- BibTex -->
+              <span class="link-block">
+                <!-- TODO: file -->
+                <a href="https://kkrr10.github.io/dm2rm/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-quote-left"></i>
+                    </span>
+                    <span>BibTex</span>
+                </a>
+              </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -116,14 +133,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <!-- TODO: eye-catch -->
-        <!-- <source src="./static/videos/teaser.mp4"
-                type="video/mp4"> -->
-      </video>
+      <img id="teaser" width="100%" src="./static/images/eye-catch.png">
       <h2 class="subtitle has-text-centered">
-        <!-- TODO: caption -->
-        XXX
+        Overview of our task. First, the DSR collects images of the environment through pre-exploration. Given the open-vocabulary instruction, it is required to retrieve the red and green framed images as the target object image and receptacle image from the collected images, respectively. Subsequently, the DSR carries the target object to the receptacle, based on the user-selected images.
       </h2>
     </div>
   </div>
@@ -137,8 +149,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <!-- TODO: -->
-            XXX
+            In this study, we aim to develop a domestic service robot (DSR) that, guided by open-vocabulary instructions, can carry everyday objects to the specified pieces of furniture.
+            Specifically, we focus on an approach that retrieves images of the target objects and receptacles from images of an environment collected through pre-exploration.
+            Few existing methods handle object manipulation tasks with open-vocabulary instructions in the image retrieval setting, and most do not identify both the target objects and the receptacles.
+            We propose the Dual-Mode Multimodal Ranking model (DM<sup>2</sup>RM), which enables images of both the target objects and receptacles to be retrieved using a single model based on multimodal foundation models.
+            We introduce a switching mechanism that leverages a mode token and phrase identification via a large language model to switch the embedding space based on the prediction target.
+            To evaluate the DM<sup>2</sup>RM, we construct a novel dataset including real-world images collected from hundreds of building-scale environments and crowd-sourced instructions with referring expressions.
+            The evaluation results show that the proposed DM<sup>2</sup>RM outperforms previous approaches in terms of standard metrics in image retrieval settings.
+            Furthermore, we demonstrate the application of the DM<sup>2</sup>RM on a standardized real-world DSR platform including fetch-and-carry actions, where it achieves a task success rate of 82% despite the zero-shot transfer setting.
           </p>
         </div>
       </div>
@@ -148,12 +166,12 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <!-- TODO: -->
-          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-        </div>
+        <h2 class="title is-3" id="video">Video</h2>
+        <video id="teaser" controls loop playsinline height="100%">
+          <!-- TODO: YouTube -->
+          <source src="./static/videos/video_ryosuke_korekata_comp.mp4"
+                  type="video/mp4">
+        </video>
       </div>
     </div>
     <!--/ Paper video. -->
@@ -163,24 +181,25 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+    <!-- TODO: -->
     <!-- Approach. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Approach</h2>
+    <!-- <div class="columns is-centered"> -->
+      <!-- <div class="column is-full-width"> -->
+        <!-- <h2 class="title is-3">Approach</h2> -->
 
         <!-- TODO: モデル図 -->
 
         <!-- XXX. -->
-        <h3 class="title is-4">XXX</h3>
-        <div class="content has-text-justified">
-          <p>
-            XXX
-          </p>
-        </div>
+        <!-- <h3 class="title is-4">XXX</h3> -->
+        <!-- <div class="content has-text-justified"> -->
+          <!-- <p> -->
+            <!-- XXX -->
+          <!-- </p> -->
+        <!-- </div> -->
         <!--/ XXX. -->
 
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
     <!--/ Approach. -->
 
   </div>
@@ -188,26 +207,28 @@
 
 <!-- TODO: Dataset? -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <p>
+<!-- TODO: -->
+<!-- <section class="section"> -->
+  <!-- <div class="container is-max-desktop"> -->
+    <!-- <div class="columns is-centered"> -->
+      <!-- <div class="column is-full-width"> -->
+        <!-- <h2 class="title is-3">Results</h2> -->
+        <!-- <div class="content has-text-justified"> -->
+          <!-- <p> -->
             <!-- TODO: 実験の概要説明 -->
-            XXX
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <!-- XXX -->
+          <!-- </p> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+<!-- TODO: -->
+<!-- <section class="hero is-light is-small"> -->
+  <!-- <div class="hero-body"> -->
+    <!-- <div class="container"> -->
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
         <!-- TODO: 動画up，動画の幅，動画の倍速や指示文などの編集 -->
         <!-- <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -251,16 +272,16 @@
                     type="video/mp4">
           </video>
         </div> -->
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- <div class="item item-toby"> -->
+          <!-- <video poster="" id="toby" autoplay controls muted loop playsinline height="100%"> -->
+            <!-- <source src="./static/videos/toby2.mp4" -->
+                    <!-- type="video/mp4"> -->
+          <!-- </video> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
 
 <!-- TODO: -->
 <!-- <section class="section" id="BibTeX">
